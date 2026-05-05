@@ -1,0 +1,33 @@
+Phase 3 Model Service Verification Results
+
+timestamp: 2026-05-05T08:33:07.548269+00:00
+Python executable: /home/jad/AIE-bootcamp/Drift-triage-copilot/.venv/bin/python
+
+Unittest
+- command: /home/jad/AIE-bootcamp/Drift-triage-copilot/.venv/bin/python -m unittest discover -s tests -p test_*.py
+- exit code: 0
+- stdout:
+<empty>
+- stderr:
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 4.922s
+
+OK
+
+Health Endpoint
+- command: curl -sS http://127.0.0.1:8000/health
+- exit code: 0
+- output: {"status":"ok","service":"model_service"}
+
+Model Health Endpoint
+- command: curl -sS http://127.0.0.1:8000/health/model
+- exit code: 0
+- output: {"status":"ok","service":"model_service","model_name":"bank-marketing-classifier","model_alias":"candidate","threshold":0.38}
+
+Predict Endpoint
+- command: curl -sS -X POST http://127.0.0.1:8000/predict -H Content-Type: application/json -d {"age":42,"job":"technician","marital":"married","education":"professional.course","default":"no","housing":"yes","loan":"no","contact":"cellular","month":"may","day_of_week":"mon","campaign":1,"pdays":999,"previous":0,"poutcome":"nonexistent","emp_var_rate":1.1,"cons_price_idx":93.994,"cons_conf_idx":-36.4,"euribor3m":4.857,"nr_employed":5191.0}
+- exit code: 0
+- output: {"request_id":"40f08083-413a-42fe-9c41-b349bb81d247","model_name":"bank-marketing-classifier","model_alias":"candidate","prediction":0,"label":"no","probability":0.29045450105104414,"threshold":0.38,"created_at":"2026-05-05T08:33:07.546699+00:00"}
+
+status: pass

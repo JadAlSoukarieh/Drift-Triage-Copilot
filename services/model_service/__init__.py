@@ -1,0 +1,2 @@
+"""FastAPI model service package."""
+
