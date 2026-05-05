@@ -1,0 +1,95 @@
+{
+  "selected_threshold": 0.38,
+  "validation_metrics_at_selected_threshold": {
+    "threshold": 0.38,
+    "accuracy": 0.7028404952658412,
+    "precision": 0.2399041752224504,
+    "recall": 0.7553879310344828,
+    "f1": 0.3641558441558442,
+    "positive_rate": 0.3546977421704297,
+    "confusion_matrix": [
+      [
+        5089,
+        2221
+      ],
+      [
+        227,
+        701
+      ]
+    ]
+  },
+  "test_metrics_at_selected_threshold": {
+    "threshold": 0.38,
+    "accuracy": 0.7034474386987133,
+    "precision": 0.24013722126929674,
+    "recall": 0.7543103448275862,
+    "f1": 0.36429872495446264,
+    "positive_rate": 0.35384802136440885,
+    "confusion_matrix": [
+      [
+        5095,
+        2215
+      ],
+      [
+        228,
+        700
+      ]
+    ]
+  },
+  "validation_roc_auc": 0.8017301081418935,
+  "test_roc_auc": 0.8012724656823436,
+  "class_balance": {
+    "train": {
+      "total": 24712,
+      "negative_count": 21928,
+      "positive_count": 2784,
+      "positive_rate": 0.11265781806409841
+    },
+    "validation": {
+      "total": 8238,
+      "negative_count": 7310,
+      "positive_count": 928,
+      "positive_rate": 0.11264870114105366
+    },
+    "test": {
+      "total": 8238,
+      "negative_count": 7310,
+      "positive_count": 928,
+      "positive_rate": 0.11264870114105366
+    }
+  },
+  "model_parameters": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": null,
+    "max_iter": 2000,
+    "multi_class": "deprecated",
+    "n_jobs": -1,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "split_sizes": {
+    "train": 24712,
+    "validation": 8238,
+    "test": 8238
+  },
+  "dataset_path": "/home/jad/AIE-bootcamp/Drift-triage-copilot/data/bank-additional-full.csv",
+  "dropped_columns": [
+    "duration",
+    "y",
+    "y_binary"
+  ],
+  "target_mapping": {
+    "yes": 1,
+    "no": 0
+  },
+  "training_timestamp": "2026-05-05T07:48:26.169937+00:00",
+  "model_hash": "adad4a7ef9322233b13eeeccbde72c1b10c4f514bb78a1e113c0da7f0b799009"
+}

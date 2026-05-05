@@ -1,0 +1,15 @@
+{
+  "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "sklearn_version": "1.7.2",
+  "pandas_version": "2.3.3",
+  "numpy_version": "2.4.4",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "operating_system": "Linux",
+  "pip_freeze_hash": "303762699efbd729482357b49c72d965474f892d2ffc5b44d10eae72d62de9e6",
+  "package_versions_used_by_training_script": {
+    "pandas": "2.3.3",
+    "numpy": "2.4.4",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.3"
+  }
+}

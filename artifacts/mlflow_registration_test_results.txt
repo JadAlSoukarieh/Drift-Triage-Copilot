@@ -1,0 +1,50 @@
+Phase 2 MLflow Verification Results
+
+Header
+- timestamp: 2026-05-05T08:05:36.882501+00:00
+- project root: /home/jad/AIE-bootcamp/Drift-triage-copilot
+- Python executable used: /home/jad/AIE-bootcamp/Drift-triage-copilot/.venv/bin/python
+- MLFLOW_TRACKING_URI: not set, defaulting to file:./mlruns
+
+Unit Test Output
+- command: /home/jad/AIE-bootcamp/Drift-triage-copilot/.venv/bin/python -m unittest discover -s tests -p test_*.py
+- exit code: 0
+- execution timestamp: 2026-05-05T08:05:20.947803+00:00
+- stdout:
+<empty>
+- stderr:
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 5.585s
+
+OK
+
+MLflow Registration Output
+- command: /home/jad/AIE-bootcamp/Drift-triage-copilot/.venv/bin/python -m ml.register_mlflow
+- exit code: 0
+- execution timestamp: 2026-05-05T08:05:28.575121+00:00
+- stdout:
+run_id: 660123beb3c347c1b8d5b5bc8245a9d7
+registered model name: bank-marketing-classifier
+model version: 4
+selected threshold: 0.38
+test ROC AUC: 0.8013
+test F1: 0.3643
+model hash: adad4a7ef9322233b13eeeccbde72c1b10c4f514bb78a1e113c0da7f0b799009
+status: candidate
+production alias/stage is intentionally not set in this phase.
+- stderr:
+Registered model 'bank-marketing-classifier' already exists. Creating a new version of this model...
+Created version '4' of model 'bank-marketing-classifier'.
+
+Summary
+- overall status: pass
+- unittest status: pass
+- registration status: pass
+- run_id: 660123beb3c347c1b8d5b5bc8245a9d7
+- registered model name: bank-marketing-classifier
+- model version: 4
+- selected threshold: 0.38
+- test ROC AUC: 0.8013
+- test F1: 0.3643
+- model hash: adad4a7ef9322233b13eeeccbde72c1b10c4f514bb78a1e113c0da7f0b799009
